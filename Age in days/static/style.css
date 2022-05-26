@@ -1,0 +1,30 @@
+.container-1 {
+    border: 1px solid black;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(243, 59, 14);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.flex-box-container-1,
+.flex-box-container-2 {
+    display: flex;
+    border: 1px solid black;
+    padding: 40px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.flex-box-container-2 {
+    color: black;
+    padding: 20px;
+}
+
