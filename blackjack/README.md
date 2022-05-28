@@ -1,3 +1,3 @@
 # BlackJack
 
-Simple BlackJack Game one player with computer
+Simple BlackJack Game single player with computer
