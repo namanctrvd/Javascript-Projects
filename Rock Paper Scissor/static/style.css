@@ -9,6 +9,7 @@
     font-weight: bold;
     object-fit: contain;
 }
+
 .game-room {
     border: 1px solid black; 
     display: flex;
