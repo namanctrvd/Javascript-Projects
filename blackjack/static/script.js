@@ -51,7 +51,7 @@ function sleep(ms) {
 function blackjackDeal() {
     if (blackjackGame['turnsOver'] === true) {
         blackjackGame['isStand'] = false
-        blackjackGame['hit'] === false
+        blackjackGame['hit'] = false
         let yourImages = document.querySelector('#your-box').querySelectorAll('img')
         let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img')
 
