@@ -11,17 +11,17 @@
 </head>
 
 <body>
-    <div class="container-1" id="container-1">
-
-        <div class="flex-blackjack-row-1">
-            <img src="static/images/ui/name.png" alt="" width="440" height="210">
+    <nav class="navbar">
+        <div class="navbar-center">
+            <img src="static/images/ui/title.jpg">
         </div>
-
-        <div class="flex-blackjack-row-2">
+    </nav>
+    <div class="container-1" id="container-1">
+        <div class="flex-blackjack-row-1">
             <img src="static/images/ui/dealer.jpeg" alt="" width="450" height="238">
         </div>
 
-        <div class="flex-blackjack-row-3">
+        <div class="flex-blackjack-row-2">
 
             <div id="dealer-box">
                 <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
@@ -32,32 +32,35 @@
             </div>
         </div>
 
-        <div class="flex-blackjack-row-4">
+        <div class="flex-blackjack-row-3 container">
 
-            <div>
-                <table>
-                    <tr>
-                        <th>Wins</th>
-                        <th>Losses</th>
-                        <th>Draws</th>
-                    </tr>
-                    <tr>
-                        <td><span id="wins">0</span></td>
-                        <td><span id="losses">0</span></td>
-                        <td><span id="draws">0</span></td>
-                    </tr>
-                </table>
+            <div class="row">
+                <div class="col col-sm-6 align-sel-center result-table">
+                    <table>
+                        <tr>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Draws</th>
+                        </tr>
+                        <tr>
+                            <td><span id="wins">0</span></td>
+                            <td><span id="losses">0</span></td>
+                            <td><span id="draws">0</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col col-sm-6 align-sel-center game-buttons">
+                    <button class="btn-lg btn-primary mr-2" id="blackjack-hit-btn" onclick="blackjackHit()">Hit</button>
+                    <button class="btn-lg btn-warning mr-2" id="blackjack-Stand-btn" onclick="blackjackStand()">Stand</button>
+                    <button class="btn-lg btn-danger" id="blackjack-deal-btn" onclick="blackjackDeal()">Deal</button>
+                </div>
+            </div>
+            
+            <div id="result-div row" class="result">
+                <h1><span id="result"></span></h1>
             </div>
 
-            <div id="result-div">
-                <h2><span id="result"></span></h2>
-            </div>
-
-            <div>
-                <button class="btn-lg btn-primary mr-2" id="blackjack-hit-btn" onclick="blackjackHit()">Hit</button>
-                <button class="btn-lg btn-warning mr-2" id="blackjack-Stand-btn" onclick="blackjackStand()">Stand</button>
-                <button class="btn-lg btn-danger" id="blackjack-deal-btn" onclick="blackjackDeal()">Deal</button>
-            </div>
+            
 
         </div>
 

@@ -1,3 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+    --primaryColor: #1fb408;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: var(--mainBlack);
+    background: var(--mainWhite);
+    font-family: "Lato", sans-serif;
+}
+
+/* nav bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgb(2, 181, 5);
+    z-index: 1;
+    color: var(--mainWhite);
+}
+.navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+/* landing page */
+.hero {
+    min-height: calc(100vh);
+    background: url("images/ui/poster.jpeg") center/cover no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.start-btn {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1.5rem;
+    background: rgba(235, 23, 23, 0.995);
+    color: var(--mainWhite);
+    border: 1px solid var(--mainWhite);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    margin: 10rem;
+}
+.banner-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+}
+.banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 2rem;
+    margin: 1rem;
+    margin-top: 10px;
+}
+.rules {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 1rem;
+}
+.banner ul {
+    text-align:start;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+}
+
+/* game page */
 .container-1 {
     border: 1px solid black;
     max-width: 75%;
@@ -11,72 +104,32 @@
     position: relative;
     block-size: auto;
 }
-
-.landing-page {
-    display: flex;
-    justify-content: center;
-    width: 60%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.landing-page .btn {
-    position: absolute;
-    bottom: 10%;
-}
-
+/* row-1 & row-2 */
 .container-1 img {
     height: 100%;
     width: 100%;
 }
-
-button {
-    margin: 10px;
-}
-
 .flex-blackjack-row-1 img {
-    width: 17%;
-    box-shadow: 0px 10px 50px rgb(23, 54, 12, 5);
-}
-
-.flex-blackjack-row-2 img {
     width: 30%;
 }
-
+.container-1 button {
+    margin: 10px;
+}
+/* row-3 */
 .flex-blackjack-row-1,
-.flex-blackjack-row-2,
-.flex-blackjack-row-3{
+.flex-blackjack-row-2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     border: 1px solid black;
 }
-
-.flex-blackjack-row-4 {
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr;
-    border: 1px solid black;
-    padding: 5px;
-}
-
-
-.flex-blackjack-row-3 {
+.flex-blackjack-row-2 {
     background:url('images/ui/table.jpg');
     color: white;
     padding: 8px;
 }
-
-.flex-box-container-1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border: 1px solid black;
-    background-color: white;
-}
- 
-.flex-blackjack-row-3 div {
+.flex-blackjack-row-2 div {
     border: 1px solid black;
     flex: 1;
     justify-content: space-around;
@@ -84,33 +137,58 @@ button {
     min-height: 336px;
     text-align: center;
 }
-
-.flex-blackjack-row-3 img {
+.flex-blackjack-row-2 img {
     width: 20%;
     height: auto;
     padding: 10px;
 }
-
-.flex-blackjack-row-4 button {
+/* media queries */
+@media (max-width: 992px) {
+    .container-1 {
+        max-width: 90%;
+    }
+        .flex-blackjack-row-3 img {
+            width: 25%;
+        }
+}
+@media (max-width: 768px) {
+    .container-1 {
+        max-width: 100%;
+        margin: 10px;
+    }
+    .flex-blackjack-row-3 img {
+        width: 27%;
+        padding: 7px;
+    }
+}
+@media (max-width: 576px) {
+    .flex-blackjack-row-3 img {
+    width: 33%;
+    padding: 4px;
+    }
+}
+/* rsult row */
+.flex-blackjack-row-3 button {
     border: 1px solid black;
     padding: 10px;
 }
-
-.flex-blackjack-row-4 div {
-    border: 1px solid black;
+.result-table {
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
-    border-radius: 4px;
-    margin:auto;
-    margin-bottom: ;
+    justify-content: center;
 }
-
+.game-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
 #result-div {
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
-    margin-left: ;
 }
-
 table, th, td {
     border: 1px solid black;
     padding: 5px;

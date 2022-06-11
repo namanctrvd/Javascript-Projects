@@ -11,13 +11,40 @@
 </head>
 
 <body>
-
-    <div class="container-1" id="container-1">
-        <div class="landing-page" id="landing-page">
-            <img src="static/images/ui/poster.jpeg" alt="">
-            <button class="btn btn-outline-primary" onclick="window.location.href='index-2.html'">Lets Play</button>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <img src="static/images/ui/title.jpg" >
         </div>
-    </div>
+    </nav>
+    <header class="hero">
+        <div>
+            <div class="banner">
+                <h2 class="rules">Rules</h2>
+                <ul>
+                    <li>After starting the game the you will have the Hit button to get a card.</li>
+                    <li>You can again click the hit button to get another card.</li>
+                    <li>Your goal is to get the highest score but not higher than 21. If your score is more than 21 than you are
+                        busted.
+                    </li>
+                    <li>Cards 1-9 will have the value of their equivalent numbers, cards J, Q and K will have a value of 10.</li>
+                    <li>The value of A can be 1 or 10 depending on the situation (if the score is + 10 &gt;= 21 then A will be
+                        counted
+                        as 10 and if the score is + 10&lt; 21 then A will be counted as 1.</li>
+                    <li>If you think you don't want to get another card, then you click the stand button.</li>
+                    <li>Stand button will allow dealer to show his cards.</li>
+                    <li>The dealer's goal is also to get more points than you, but if the dealer's score is less than 16 he must
+                        take
+                        another card and if his score is greater than 16 he cannot take any more cards.</li>
+                    <li>If no one is busted then the person with the highest score will be the winner.</li>
+                    <li>If one of you is busted then the other will be the winner because his score is less than 21</li>
+                    <li>If both of you are busted or you both have the same score then it will be a draw.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="start-btn">
+            <button class="banner-btn" onclick="window.location.href='index-2.html'">Play</button>
+        </div>
+    </header>
 
     <script src=" static/script.js"></script>
 
